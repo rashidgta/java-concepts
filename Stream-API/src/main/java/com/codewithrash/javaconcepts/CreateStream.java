@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class ObjectMain {
+public class CreateStream {
     public static void main(String[] args) {
 
         /* 1- empty Stream */
         Stream<Object> emptyStream = Stream.empty();
 
         /* 2- Array, Object, Collection */
-        String names[] = {"Rashid", "Owais", "Khalid","Aamir", "Danish"};
+        String[] names = {"Rashid", "Owais", "Khalid","Aamir", "Danish"};
         Stream<String> names1 = Stream.of(names);
         names1.forEach(System.out::println);
 
@@ -25,7 +25,6 @@ public class ObjectMain {
         arrayStream.forEach(System.out::println);
 
         /* List, Set */
-
         List<Integer> integerList = new ArrayList<>();
         integerList.add(7);
         integerList.add(15);

@@ -2,7 +2,7 @@ package com.codewithrash.javaconcepts;
 
 import java.util.List;
 
-public class StreamMain {
+public class StreamBasics {
     public static void main(String[] args) {
 
         List<Integer> list1 = List.of(2,9,12,15,24,37);
@@ -14,5 +14,14 @@ public class StreamMain {
         /* filter numbers greater than 10 */
         List<Integer> greaterThanTenlist = list1.stream().filter(i -> i > 10).toList();
         System.out.println(greaterThanTenlist);
+
+        char[] newChar = {'s','r','y'};
+        String[] names = {"rashid", "aamir"};
+        int[] no = {4, 6, 7,74};
+        FilterMap[] filtmap = new FilterMap[3];
+        filtmap[0]= new FilterMap();
+
+
+
     }
 }

@@ -1,9 +1,8 @@
 package com.codewithrash.javaconcepts;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class MethodMain {
+public class FilterMap {
     public static void main(String[] args) {
 
         // filter(Predicate)
