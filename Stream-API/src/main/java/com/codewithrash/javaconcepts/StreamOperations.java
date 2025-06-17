@@ -1,9 +1,6 @@
 package com.codewithrash.javaconcepts;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamOperations {
@@ -25,15 +22,24 @@ public class StreamOperations {
         Optional<Integer> maxNumber = numbers.stream().sorted((x, y) -> x.compareTo(y) > 0 ? -1 : 1).findFirst();
         System.out.println(maxNumber.get());
 
-        List<String> names = List.of("Rashid","Aamir","Danish","Khalid","Owais","Tom","Sam","Alex");
+        List<String> names = List.of("Rashid","Aamir","Danish","Khalid","Owais","Rashid","Tom","Sam","Alex");
 
 
+        // group by on length
         Map<Integer, List<String>> collect = names.stream().collect(Collectors.groupingBy(e -> e.length()));
         collect.forEach((x, y) -> System.out.println("length = "+ x +"," +" y = "+ y));
 
+        // group by on length with count in output
         names.stream()
                 .collect(Collectors.groupingBy(e -> e.length(), Collectors.counting()))
                 .forEach((x,y) -> System.out.println("length= "+ x +","+" Count= " + y));
+
+        //converting Map to set will remove duplicate automatically
+        Set<String> removeDuplicate = names.stream().collect(Collectors.toSet());
+        removeDuplicate.forEach(x-> System.out.println(x));
+
+
+
 
 
 

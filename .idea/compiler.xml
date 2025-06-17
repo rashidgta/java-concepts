@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Optional" />
+        <module name="Stream-API" />
+        <module name="Functionalnterface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
